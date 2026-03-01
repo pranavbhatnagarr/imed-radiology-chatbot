@@ -1,24 +1,3 @@
-# import os
-# import sys
-# import chromadb
-# from sentence_transformers import SentenceTransformer
-# from groq import Groq
-# from dotenv import load_dotenv
-# from pathlib import Path
-
-# # Find .env from project root
-# env_path = Path("/Users/pranavbhatnagar/Desktop/imed-radiology/imed-radiology-chatbot/.env")
-# load_dotenv(dotenv_path=env_path, override=True)
-
-# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-# if not GROQ_API_KEY:
-#     raise EnvironmentError(f"GROQ_API_KEY not found in {env_path}")
-
-# model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-# client = chromadb.PersistentClient(path="data/chroma_db")
-# collection = client.get_collection("procedures")
-# groq_client = Groq(api_key=GROQ_API_KEY)
-
 import os
 import sys
 import chromadb
