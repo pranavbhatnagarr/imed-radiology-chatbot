@@ -49,7 +49,7 @@ def answer(query):
 
     # Error condition 2: no relevant content found
     if not chunks or chunks[0]["score"] > 0.8:
-        return "I could not find relevant information about that in the I-MED procedure database. Please try rephrasing your question or ask about a specific procedure like MRI, CT scan, or Ultrasound."
+        return "I could not find relevant information about that in the I-MED procedure database. Please try rephrasing your question or ask about a specific procedure like General X-Ray, Lung Screening, Cardiac Services, Mammography, MRI, CT scan, or Ultrasound."
 
     # Build context
     context = ""
@@ -59,7 +59,7 @@ def answer(query):
         if chunk["url"] not in sources:
             sources.append(chunk["url"])
 
-    prompt = f"""You are a helpful assistant for I-MED Radiology. Answer the patient's question using ONLY the context provided below. Do not use any outside knowledge. If the answer is not in the context, say so clearly.
+    prompt = f"""You are a helpful assistant for I-MED Radiology. Answer the patient's question using ONLY the context provided below. Do not use any outside knowledge. If the answer is not in the context, say so clearly. If the question is about pricing, costs, or fees, always advise the patient to contact their local I-MED clinic directly by visiting i-med.com.au/find-a-radiology-clinic.
 
 Context:
 {context}
