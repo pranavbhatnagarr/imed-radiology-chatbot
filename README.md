@@ -37,6 +37,23 @@ bash run.sh
 
 The app will open at http://localhost:8501
 
+### Docker Setup (Alternative)
+```bash
+# 1. Clone the repo
+git clone https://github.com/pranavbhatnagarr/imed-radiology-chatbot.git
+cd imed-radiology-chatbot
+
+# 2. Add your Groq API key
+echo "GROQ_API_KEY=your_key_here" > .env
+
+# 3. Build and run with Docker
+docker-compose up --build
+```
+
+The app will open at http://localhost:8501
+
+> No Python installation required — Docker handles everything automatically.
+
 ## Example Queries and Outputs
 
 **Query 1: "What happens during an MRI scan?"**
