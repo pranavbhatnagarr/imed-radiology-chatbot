@@ -5,14 +5,22 @@
 **Email sent to:** accounts@i-med.com.au
 **Subject:** Patient query - MRI cost enquiry
 **Date sent:** 28 February 2026
+**Time sent:** 11:39 AM
 
 **Full reply received (automated response, received same day):**
 
 > Thank you for reaching out to the I-MED Accounts Receivable team.
 > If your enquiry is regarding a quote, booking, or requesting images or scans: Please note that our Accounts Receivable team are unable to assist with appointment bookings or quotes, or access to images or scan results. To ensure you receive the fastest service, we kindly ask you to Book online or find a clinic near you for quotes, enquiries or image requests.
 
+**Follow-up response from Accounts (2 March 2026 - 3:38 PM):**
+> Thank you for reaching out to us regarding a quote or booking for your radiology exam.
+> I-Med Accounts Department are unable to assist you with this and as such, we kindly ask that you contact our Bookings Team directly:
+> -Book your appointment online via our website at https://i-med.com.au/book-appointment.
+> -Alternatively, you can speak with our Bookings Team by visiting https://i-med.com.au/find-a-radiology-clinic to find the most appropriate clinic to speak with one of our agents.
+
+
 **What this tells us about the chatbot:**
-The reply confirms that I-MED does not provide pricing or cost information through any digital channel, not via email, and not on their public website. The accounts team explicitly states they cannot assist with quotes and redirects patients to call their local clinic directly. This means a patient asking the chatbot "how much does a knee MRI cost?" cannot be answered accurately. No amount of improved scraping could fix this limitation.
+The responses confirm that pricing and quotes are not handled centrally and are not provided via email. Instead, patients are redirected to book online or contact a specific clinic directly. This indicates that procedure pricing depends on multiple factors such as clinic location, referral details, and Medicare eligibility, and is therefore not available as publicly structured data that can be scraped.
 
 ---
 
@@ -20,6 +28,7 @@ The reply confirms that I-MED does not provide pricing or cost information throu
 
 **URL scraped:** https://i-med.com.au/find-a-radiology-clinic
 **Total lines returned:** 895
+**Clinic records (counted by 'View clinic information'):** 174
 
 **First 3 lines of raw output:**
 ```
@@ -28,7 +37,7 @@ View site as:
 Patient
 ```
 
-**Observation:** The clinic finder page returned 895 lines and did include structured clinic listing data (clinic names, addresses, and phone numbers). This confirms the listing content is accessible using requests + BeautifulSoup. However, the listing page does not include opening hours; those appear to require opening each clinic’s “View clinic information” page. Since my scraper only collected top-level listings, my chatbot cannot answer opening-hours questions without extending the scraper to follow each clinic detail link.
+**Observation:** The clinic finder page returned 895 lines and 174 clinics, including structured clinic listing data (clinic names, addresses, and phone numbers). This confirms the listing content is accessible using requests + BeautifulSoup. However, the listing page does not include opening hours; those appear to require opening each clinic’s “View clinic information” page. Since my scraper only collected top-level listings, my chatbot cannot answer opening-hours questions without extending the scraper to follow each clinic detail link.
 
 ---
 
@@ -119,12 +128,12 @@ The website explicitly states fees vary and will be advised at time of booking. 
 This behaviour was implemented after receiving the email reply in Action Step 1, by updating the system prompt to always redirect pricing questions to the clinic finder page.
 
 **2. "What are the opening hours of the I-MED clinic in Parramatta?"**
-**Gap type: (a) Data does not exist in my scraped dataset**
+**Gap type: (b) Data does not exist in my scraped dataset but it exists**
 My scraper successfully extracted clinic names, addresses, and phone numbers from the clinic finder page (server-rendered HTML). However, opening hours are not shown on the main listings page, they appear only on each clinic’s “View clinic information” detail page.
 Since I did not scrape those individual clinic pages, the chatbot cannot answer opening-hours questions. This could be fixed by extending the scraper to follow each clinic detail link and extract opening hours.
 
 **3. "What are the risks of a PET scan?"**
-**Gap type: (a) Data does not exist in my scraped dataset**
+**Gap type: (b) Data does not exist in my scraped dataset but it exists**
 PET scan was not included in the 7 procedures I scraped. The website does have a PET scan page, but I did not scrape it. This is a coverage gap in my dataset rather than a website limitation — it could be fixed by adding the PET scan URL to the scraper.
 
 ---

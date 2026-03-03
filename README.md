@@ -80,7 +80,7 @@ The app will open at http://localhost:8501
 ## Known Limitations
 
 - **Pricing information:** I-MED does not publish specific procedure costs online. Confirmed via Action Step 1 — even direct email inquiry was redirected. Questions about cost cannot be answered.
-- **Limited procedure coverage:** Only 7 procedures were scraped. PET scan, nuclear medicine, fluoroscopy, and other unscraped procedures will return no results.
+- **Limited procedure coverage:** Only 7 procedures were scraped. PET scan, nuclear medicine, Angiography, and other unscraped procedures will return no results.
 - **Chunk boundary limitations:** Text is chunked by word count (400 words, 50-word overlap) rather than semantic sections. Related information can occasionally be split across chunks.
 - **No session memory:** Each question is answered independently with no memory of previous questions in the conversation.
 - **Clinic-specific information:** The scraper captures clinic names, addresses, and phone numbers from the clinic listing page. However, opening hours and other clinic-specific details are likely contained on individual clinic detail pages (“View clinic information”), which were not scraped in this submission.
