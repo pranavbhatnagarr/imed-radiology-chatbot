@@ -132,6 +132,8 @@ PET scan was not included in the 7 procedures I scraped. The website does have a
 
 The CT scan page at i-med.com.au/procedures/ct-scan produced **8 chunks** after scraping and embedding.
 
+===== Chunk 0 =====
+
 > Computed tomography - CT scan A CT scan uses sophisticated x-ray technology to take images of parts of the body in very fine slices. The fine detail allows accurate diagnosis of a variety of illnesses and injuries. Computed tomography - CT scan A CT scan uses sophisticated x-ray technology to take images of parts of the body in very fine slices. The fine detail allows accurate diagnosis of a variety of illnesses and injuries. What is a CT scan? Computed tomography is commonly referred to as a ‘CT scan’. It is a way of using x-rays to take pictures or images in very fine slices through the part of the body that the doctor has asked to be investigated. One way to think of it is of taking slices through a loaf of bread, with more slices providing increasingly detailed images. The most recent machines are multi-slice (MSCT) scanners, producing up to 320 slices that are often less than 1mm thick. Once the radiographer has taken the scan, these very thin slices can be put all together to reconstruct the loaf (or in this case your body). Once they are put back together the radiographer can cut it into the slices that will help the radiologist (a doctor who has specialised in diagnostic imaging) to see the parts of the body that are of interest. With all of these different slices and 3D reconstructions, the radiologist will have a very detailed picture of the structures making up your body. This should help them to make a diagnosis so that the right treatment can be planned as soon as possible. Safe radiation dose management Our commitment to your safety is our highest priority. I-MED Radiology invests time, effort and resources into making sure that every patient receives a quality medical imaging service utilising the most appropriate imaging techniques and the lowest possible dose of radiation. Our radiology staff are highly skilled technicians who are licensed to operate our modern diagnostic imaging equipment. They also actively participate in ongoing training and a process of continuous improvement to ensure our high safety and quality standards are maintained. We have implemented a radiation-dose-monitoring software solution (DOSE) in 208 CT, PET and SPECT systems across our Network. This innovative software is designed to optimise how we monitor, evaluate and report radiation doses — reinforcing our commitment to patient safety, data accuracy and clinical excellence. I-MED
 
 ================================================================================
@@ -189,15 +191,11 @@ According to the CT Scan procedure on the I-MED Radiology website, for a Chest C
 
 **Source:** https://i-med.com.au/procedures/ct-scan
 
-**Assessment:** In this case, the chatbot performed correctly because the fasting instruction for Chest CT was clearly present in one of the top-ranked chunks retrieved by semantic search.
-
-However, this success is dependent on how chunk boundaries align with the page layout. Since preparation instructions span multiple adjacent chunks, a different chunk size or longer page could result in partial retrieval or incomplete instructions.
-
-This highlights a structural limitation of fixed word-count chunking.
+**Assessment:** In this case, the chatbot performed correctly because the fasting instruction for Chest CT was clearly present in one of the top-ranked chunks retrieved by semantic search. However, this success is dependent on how chunk boundaries align with the page layout. Since preparation instructions span multiple adjacent chunks, a different chunk size or longer page could result in partial retrieval or incomplete instructions. This highlights a structural limitation of fixed word-count chunking.
 
 A more robust production approach would:
 
-First split content by semantic HTML headings (e.g., <h2>, <h3>)
+First split content by semantic HTML headings
 
 Then apply token-based chunking within each section
 
