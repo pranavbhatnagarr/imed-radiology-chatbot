@@ -56,25 +56,25 @@ The app will open at http://localhost:8501
 
 ## Example Queries and Outputs
 
-**Query 1: "What happens during an MRI scan?"**
-> According to the MRI Scan procedure on the I-MED Radiology website, during an MRI scan, the procedure will be thoroughly explained to you, and your safety questionnaire reviewed before you enter the scan room. You will be asked to change into a gown, lie on the scan table, and given a buzzer to communicate with the radiographer.
-> Source: https://i-med.com.au/procedures/mri-scan
-
-**Query 2: "Do I need to fast before a CT scan?"**
-> Some CT scans require fasting and others do not. Chest CT and abdomen/pelvis CT require a two hour fast. Brain, sinus, spine, knee and wrist CT scans require no preparation.
+**Query 1: "What is iodinated contrast used for in a CT scan?"**
+> According to the CT Scan procedure on the I-MED Radiology website, iodinated contrast is used to outline specific parts of the body, such as the intestine, and to help the radiologist make an accurate diagnosis. It can be administered through an injection into a vein in the arm or hand, or as a drink to outline the intestine. The iodinated contrast helps to provide clearer images of the area being scanned.
 > Source: https://i-med.com.au/procedures/ct-scan
 
-**Query 3: "Does Medicare cover X-ray?"**
-> Many x-rays are partially covered by a Medicare rebate, but the rebate is often less than the actual cost, resulting in a gap payment. Pensioners and healthcare card holders are bulk billed for most Medicare rebateable imaging procedures.
-> Source: https://i-med.com.au/procedures/general-x-ray
+**Query 2: "What happens if I am claustrophobic during an MRI?"**
+> According to the MRI Scan procedure, if you are claustrophobic and find you are unable to proceed with the scan, a sedative can be administered. You are advised to discuss this with your doctor and inform the radiology practice before having the scan. Additionally, you can ask your GP to prescribe a sedative that you can take before arriving, and ensure you have a designated driver to take you to and from the clinic.
+> Source: https://i-med.com.au/procedures/mri-scan
 
-**Query 4: "How do I prepare for an ultrasound?"**
-> You should read any instructions given by your doctor, wear clothing that provides easy access to the area being imaged, and bring any previous ultrasound films. An abdomen ultrasound requires fasting for six hours prior to the examination.
+**Query 3: "I have diabetes. Do I need to tell the clinic before my CT scan?"**
+> According to the CT Scan procedure information, if you have diabetes, you should inform the clinic before your appointment. The context states that "All patients are asked if they have kidney disease, diabetes or if taking metformin. If ‘yes’ to any of the above, ask patient to bring copies of recent blood tests (within the last 3 months) to their appointment." Additionally, it is mentioned that "It is important that the need to fast does not affect you if you have special dietary requirements (e.g. diabetes). Please check with your doctor or our clinic if you have any concerns." It is also noted that "Safety information for diabetics" is provided, which includes information about the potential malfunction of diabetic equipment, such as CGM and insulin pumps, when exposed to x-rays. Patients with diabetes are advised to notify staff of any diabetic equipment attached to them prior to the procedure.
+> Source: https://i-med.com.au/procedures/ct-scan
+
+**Query 4: "How does an ultrasound work and how much would it cost me?"**
+> According to the Ultrasound procedure information, an ultrasound examination uses high-frequency sound waves to produce an image onto a screen that shows the inside of your body. The examination is performed using a smooth, hand-held device called a transducer that is moved across the body with a sliding and rotating action.
+> Regarding the cost, the information provided in the Ultrasound procedure section states that fees for radiology procedures vary and depend on several factors. To get an accurate estimate of the cost, I would advise you to contact your local I-MED clinic directly by visiting i-med.com.au/find-a-radiology-clinic. They will be able to provide you with more information on the fees associated with your examination.
 > Source: https://i-med.com.au/procedures/ultrasound
 
-**Query 5: "What are the risks of an X-ray?"**
-> At the radiation dose levels used in diagnostic radiography there is little or no evidence of health effects. The two major risks are cancer occurring many years after radiation exposure, and health problems in children born to people exposed to radiation. To put this in perspective, a patient would need approximately 38 chest x-rays to receive radiation similar to one year of normal background radiation.
-> Source: https://i-med.com.au/procedures/general-x-ray
+**Query 5: "Why is the sky blue?"**
+> I could not find relevant information about that in the I-MED procedure database. Please try rephrasing your question or ask about a specific procedure like General X-Ray, Lung Screening, Cardiac Services, Mammography, MRI, CT scan, or Ultrasound.
 
 
 ## Known Limitations
