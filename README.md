@@ -76,11 +76,11 @@ The app will open at http://localhost:8501
 > At the radiation dose levels used in diagnostic radiography there is little or no evidence of health effects. The two major risks are cancer occurring many years after radiation exposure, and health problems in children born to people exposed to radiation. To put this in perspective, a patient would need approximately 38 chest x-rays to receive radiation similar to one year of normal background radiation.
 > Source: https://i-med.com.au/procedures/general-x-ray
 
+
 ## Known Limitations
 
-- **JavaScript-rendered content**: The scraper uses requests + BeautifulSoup and cannot execute JavaScript. Some content hidden behind "Read more" buttons was not captured. A Selenium-based scraper would be needed for complete coverage.
-- **Clinic information**: The clinic finder page loads all clinic data dynamically via JavaScript. No structured clinic data (addresses, phone numbers, hours) was captured.
-- **Pricing information**: I-MED does not publish specific pricing on their website. Questions about procedure costs cannot be answered accurately.
-- **Limited procedure coverage**: Only 7 procedures were scraped. Questions about PET scans, nuclear medicine, or other unscraped procedures will return no results.
-- **Chunk boundary limitations**: Text is chunked by word count (400 words, 50-word overlap) rather than semantic sections. Related information can occasionally be split across chunks.
-- **No session memory**: Each question is answered independently with no memory of previous questions in the conversation.
+- **Pricing information:** I-MED does not publish specific procedure costs online. Confirmed via Action Step 1 — even direct email inquiry was redirected. Questions about cost cannot be answered.
+- **Limited procedure coverage:** Only 7 procedures were scraped. PET scan, nuclear medicine, fluoroscopy, and other unscraped procedures will return no results.
+- **Chunk boundary limitations:** Text is chunked by word count (400 words, 50-word overlap) rather than semantic sections. Related information can occasionally be split across chunks.
+- **No session memory:** Each question is answered independently with no memory of previous questions in the conversation.
+- **Clinic-specific information:** The scraper captures clinic names, addresses, and phone numbers from the clinic listing page. However, opening hours and other clinic-specific details are likely contained on individual clinic detail pages (“View clinic information”), which were not scraped in this submission.
